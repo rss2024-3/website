@@ -37,14 +37,14 @@
 
       <!-- Main -->
       <div id="main">
-        <article id="labs">
           <!-- Post -->
         <section class="post">
           <header class="major">
             <h1>Labs<br /></h1>
             <p>Contains all Lab Reports<br /></p>
           </header>
-          <a href="#3">
+          <!-- Lab Directory -->
+          <a href="#3" onclick="openPopup('3')">
             <h2>Lab 3:</h2>
             <p>Wall Following</p>
           </a>
@@ -65,9 +65,32 @@
             <p>name</p>
           </a>
         </section>
-        </article>
-        
       </div>
+
+      <div id="3" class="lab_report">
+        <left_article>
+          <header>
+            <h2>
+              <a>Lab 3:<br /> </a>
+            </h2>
+            <p>Wall Follower</p>
+          </header>
+          <a class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+          <a
+            href="https://docs.google.com/presentation/d/13JLmgsFsNbWcvKfqUH701b3LbLYZ8qz-RTXoWYLEB14/edit?usp=sharing"
+          >
+            <p>Insert summary here!</p>
+          </a>
+        </left_article>
+        <right_article>
+          <a class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+          <p>Report - cancelled!</p>
+        </right_article>
+        <button onclick="closePopup('3')">Close</button>
+      </div>
+      
+      <!-- Overlay -->
+      <div id="overlay" class="overlay"></div>
 
       <!-- Copyright -->
       <!-- <div id="copyright">
@@ -86,5 +109,18 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      // Function to open the popup
+      function openPopup(input_id) {
+        document.getElementById(input_id).style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+      }
+    
+      // Function to close the popup
+      function closePopup(input_id) {
+        document.getElementById(input_id).style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+      }
+    </script>
   </body>
 </html>

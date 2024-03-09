@@ -4062,18 +4062,52 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-color: #18bfef;
 }
 
-.lab_report {
-  padding: 3px;
-  width: 43.5%;
-  height: 53%;
-}
-
 .lab_slides {
   padding-top: 30px;
   width: 20%;
   /* padding-right: 20px; */
   /* width: 40%;
   height: 53%; */
+}
+
+.lab_report {
+  display: none; /* Hide popup by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 70vw; /* 90% of the viewport width */
+  max-height: 90vh; /* 90% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Styling for the overlay */
+.overlay {
+  display: none; /* Hide overlay by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure overlay is below the popup */
+}
+
+/* Styling for the overlay */
+.overlay {
+  display: none; /* Hide overlay by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure overlay is below the popup */
 }
 
 .picture img {
