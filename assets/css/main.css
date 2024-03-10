@@ -3910,7 +3910,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #main > .post {
-  padding: 8rem 8rem 6rem 8rem;
+  padding: 8rem 8rem 1rem 8rem;
 }
 
 #main > .post header.major > .date {
@@ -3926,6 +3926,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 #main > .post.featured {
   text-align: center;
+}
+#main > .post.labs {
+  text-align: left;
+  padding-top: 5%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -4008,7 +4012,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #main > .posts > right_article {
-  padding-top: 18%;
+  /* padding-top: 18%; */
   text-align: left;
   border-color: #eeeeee;
   border-style: solid;
@@ -4049,65 +4053,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   flex: 1;
   margin: auto;
   width: 50%;
-}
-
-.lab_container {
-  text-align: left;
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
-}
-.lab_content {
-  display: flex;
-  justify-content: center;
-  background-color: #18bfef;
-}
-
-.lab_slides {
-  padding-top: 30px;
-  width: 20%;
-  /* padding-right: 20px; */
-  /* width: 40%;
-  height: 53%; */
-}
-
-.lab_report {
-  display: none; /* Hide popup by default */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  width: 70vw; /* 90% of the viewport width */
-  max-height: 90vh; /* 90% of the viewport height */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Styling for the overlay */
-.overlay {
-  display: none; /* Hide overlay by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 999; /* Ensure overlay is below the popup */
-}
-
-/* Styling for the overlay */
-.overlay {
-  display: none; /* Hide overlay by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 999; /* Ensure overlay is below the popup */
 }
 
 .picture img {

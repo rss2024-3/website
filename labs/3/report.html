@@ -1,0 +1,132 @@
+<h1>RSS Team Website Template</h1>
+<p>This is a generic template for your team website hosted on github pages.</p>
+<h2>Modifying the template</h2>
+<p>
+  You can change the template design as much as you want - this website is
+  pretty boring right now. Use pictures, videos, gifs and stories from your RSS
+  experience to make this website pop! There are a couple constraints however.
+  First, your lab reports must remain accessible at these links:
+</p>
+<pre><code>https://rss2024-[TEAM_NUMBER].github.io/website/labs/[LAB_NUMBER]</code></pre>
+<p>
+  Also for the sake of the graders, please make sure that the text remains
+  <strong>black on white</strong>.
+</p>
+<p>
+  And finally <strong>don't add too much javascript/bloat</strong>. We're going
+  to need to go through a whole bunch of these websites rapidly and we don't
+  want it to be too slow to load.
+</p>
+<h2>Setting up the template</h2>
+<p>
+  You will be hosting this template using
+  <a href="https://pages.github.com/">github pages</a>. If you haven't already
+  done so, have your team make an organization on
+  <a href="https://github.com">github.com</a>. Make sure your organization is
+  named <code>rss2024-#</code> where &quot;#&quot; is your team number (not your
+  car number!). Do not pad the number with zeros.
+</p>
+<p>
+  Then fork this repo into your organization, and rename the repo to just
+  <code>website</code>. In the settings page of the forked repo scroll down to
+  the &quot;Github Pages&quot; section. Under &quot;Source&quot;, click the
+  dropdown menu and select &quot;master branch&quot; then hit save. You should
+  now be able to see the template if you navigate to:
+</p>
+<pre><code>https://rss2024-[TEAM_NUMBER].github.io/website/</code></pre>
+<p>
+  Now in order to modify the template, clone your fork and read on to the next
+  section.
+</p>
+<h2>Using the template for lab reports</h2>
+<p>
+  <strong
+    >You must follow the instructions given in
+    <code>/latex_report/latex_report.pdf</code> for your lab reports. This
+    document outlines the expectations for the reports as well as an outline of
+    the required sections.</strong
+  >
+</p>
+<p>
+  The template has a home page written in html at <code>/index.html</code>. It
+  also has a labs page at <code>/labs/index.html</code>. You will add folders
+  for each of your labs inside the <code>/labs</code> folder, and each one will
+  need to have a corresponding <code>index.html</code> file as well as any
+  supporting files (images, etc.). You can take a look at the
+  <code>/labs/example_lab</code> section. There are several options for how to
+  generate your lab report as a PDF, but at minimum you must provide links to
+  your briefing slides and a download of your report in PDF format, as well as
+  embedding the slides and report as shown in
+  <code>/labs/example_lab/index.html</code>. You can see how this example lab is
+  rendered at https://mit-rss.github.io/website2022/labs/example_lab/
+</p>
+<p>
+  <strong>To embed your slideshow onto the page</strong> as is shown in the link
+  above, go on your Google Slides page, then click File &gt; Publish to the Web.
+  Then, select the Embed tab. After selecting the options you'd like for the
+  slides, it should give you HTML code which can be pasted into your HTML file
+  to add your slides to the page.
+</p>
+<p>
+  One simple way to generate this PDF would be to use a LaTeX tool such as
+  <a href="https://www.overleaf.com/">Overleaf</a> (think google docs for LaTeX)
+  to collaborate with your team. You can use the file
+  <code>/latex_report/latex_report.tex</code> as a starter template - it was
+  used to produce the lab report instructions at
+  <code>/latex_report/latex_report.pdf</code> if you want to see how the
+  corresponding LaTeX code renders in a PDF. It also has examples of how to
+  create elements like tables, figures, pseudocode, and code blocks in LaTeX.
+</p>
+<p>
+  To view local changes that are made to your website repo on github pages,
+  commit them and refresh the page. You might need to do a hard refresh
+  depending on your browser / cookie settings.
+</p>
+<h2>Optional</h2>
+<p>
+  If you would like more creative freedom, you are also welcome to render your
+  report directly in HTML in addition to your PDF.
+</p>
+<p>
+  Another option is to write your report in markdown and then run the provided
+  <code>md_make.py</code> script, which will generate an
+  <code>html.txt</code> file with your report translated into HTML. To render
+  this on your website, paste the contents of <code>html.txt</code> into your
+  <code>index.html</code> file (see
+  <code>/labs/example_lab/index.html</code> for where to paste). You will have
+  to edit <code>md_make.py</code> to read from the correct filename where you
+  have your markdown.
+  <strong
+    >Again, note that these methods are optional, but providing a download link
+    and embedding a PDF of your report is required.</strong
+  >
+</p>
+<p>
+  If you do want to use <code>md_make.py</code>, you should first install
+  mistune:
+</p>
+<pre><code>    sudo apt-get install python3-pip
+    sudo pip3 install mistune
+</code></pre>
+<p>
+  If you want to make your report fancier you can also modify md_mark.py with
+  <a
+    href="http://www.discoversdk.com/blog/custom-markdown-parsing-with-mistune-and-python"
+    >custom options</a
+  >, and if you want to generate a pdf from markdown you can install pandoc and
+  run
+</p>
+<pre><code>    pandoc lab_report.md -o lab_report.pdf
+</code></pre>
+<p>
+  The website template also supports $\LaTeX$ via mathjax (this is a script at
+  the beginning of the html lab files)! For inline math use single dollar signs
+  and for multiline math use use double dollar signs like this:
+</p>
+<p>$$ \begin{align} e^{i\pi} + 1 = 0 \end{align} $$</p>
+<p>
+  If you want to use markdown, you can use the file
+  <code>markdown_report/markdown_report.md</code> as a starter template - it has
+  examples of headers and text formatting as well as how to create elements like
+  tables, figures, and code blocks in markdown.
+</p>
