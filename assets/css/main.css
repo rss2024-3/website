@@ -2723,6 +2723,7 @@ input[type="radio"]:focus + label:before {
   display: block;
   margin: 2.5rem 0;
   width: 100%;
+  max-height: 60vh;
 }
 
 .image.fit:first-child {
@@ -4007,7 +4008,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-style: solid;
   border-bottom-width: 2px;
   border-right: 0px;
+  border-left: 0px;
   border-top: 0px;
+  /* background-color: #18bfef; */
   text-align: left;
 }
 
@@ -4018,6 +4021,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-style: solid;
   border-bottom-width: 2px;
   border-left: 0px;
+  border-right: 0px;
   border-top: 0px;
   text-align: left;
 }
@@ -4053,6 +4057,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   flex: 1;
   margin: auto;
   width: 50%;
+}
+
+.video_content {
+  /* background-color: #18bfef; */
+  text-align: left;
+  height: 5px;
 }
 
 .picture img {
