@@ -2724,6 +2724,7 @@ input[type="radio"]:focus + label:before {
   margin: 2.5rem 0;
   width: 100%;
   max-height: 60vh;
+  border-radius: 25px;
 }
 
 .image.fit:first-child {
@@ -2738,6 +2739,7 @@ input[type="radio"]:focus + label:before {
   display: block;
   margin: 4rem 0;
   width: 100%;
+  border-radius: 25px;
 }
 
 .image.main:first-child {
@@ -4047,11 +4049,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   justify-content: center; /* Center align the items horizontally */
 }
 
-.picture {
-  width: 43.5%;
-  height: 53%;
-}
-
 .summary {
   padding-left: 5%;
   flex: 1;
@@ -4059,7 +4056,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: 50%;
 }
 
-.video_content {
+.video_section_title {
   /* background-color: #18bfef; */
   text-align: left;
   height: 5px;
@@ -4068,8 +4065,22 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 .picture img {
   max-width: 100%; /* Ensure the image does not exceed its container */
   height: auto; /* Maintain aspect ratio */
+  border-radius: 25px;
+}
+.scrollable-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  justify-content: center;
+  border-top-width: 0px;
+  border-bottom-width: 2px solid #eeeeee;
 }
 
+.scrollable-item {
+  display: inline-block; /* Make items appear in a row */
+  margin-right: 20px; /* Optional: Add some spacing between items */
+}
 @media screen and (max-width: 980px) {
   #main > .posts > * {
     width: 50%;
