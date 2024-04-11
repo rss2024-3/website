@@ -65,6 +65,10 @@
         <article id="about" class="post labs">
             <h2>Lab Report</h2>
             <p><a href="../5/Lab_5_report.pdf" download>Link to Download Lab Report</a></p>
+            <div id="report" class="report"></div>
+        
+
+
           </article>
     </div>
       </div>
@@ -78,5 +82,13 @@
     <script src="../../assets/js/breakpoints.min.js"></script>
     <script src="../../assets/js/util.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script>
+      // Load included_content.html into #includedContent div
+      fetch("./report.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("report").innerHTML = html;
+        });
+    </script>
   </body>
 </html>
