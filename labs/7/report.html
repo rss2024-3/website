@@ -372,10 +372,12 @@
       other objects present in the image.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.18.52_PM.png"
-        alt="Figure 1: The image received from the ZED camera include a lot of extraneous noise, which requires additional masks to reliably segment the lane lines."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.18.52_PM.png"
+          alt="Figure 1: The image received from the ZED camera include a lot of extraneous noise, which requires additional masks to reliably segment the lane lines."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 1: The image received from the ZED camera include a lot of
@@ -391,10 +393,12 @@
       attention on the bottom half as all the necessary lane visuals are there.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.23.30_PM.png"
-        alt="Figure 2: After cropping the top half out to remove top noise, there are much less distractors that could mess with the color segmentation performed later."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.23.30_PM.png"
+          alt="Figure 2: After cropping the top half out to remove top noise, there are much less distractors that could mess with the color segmentation performed later."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 2: After cropping the top half out to remove top noise, there
@@ -412,10 +416,13 @@
       thresholds for white color segmentation very clearly outlines the lanes.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.22.53_PM.png"
-        alt="Figure 3: The converted HSV color-space image is then filtered for white. The resulting image is only of the lanes with no additional noise."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.22.53_PM.png"
+          alt="Figure 3: The converted HSV color-space image is then filtered for white. The resulting image is only of the lanes with no additional noise."
+        />
+      </div>
+      
       <figcaption aria-hidden="true">
         <strong
           >Figure 3: The converted HSV color-space image is then filtered for
@@ -430,10 +437,12 @@
       gradient values as edges and tracks edges with hysteresis.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.44.47_PM.png"
-        alt="Figure 4: Edge detection provides the image pixels that outline the lanes in the image."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.44.47_PM.png"
+          alt="Figure 4: Edge detection provides the image pixels that outline the lanes in the image."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 4: Edge detection provides the image pixels that outline the
@@ -442,10 +451,12 @@
       </figcaption>
     </figure>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.45.06_PM.png"
-        alt="Figure 5: The Hough transform and subsequent slope filtering properly identifies the left lane, which is the reference the racecar uses to follow."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_6.45.06_PM.png"
+          alt="Figure 5: The Hough transform and subsequent slope filtering properly identifies the left lane, which is the reference the racecar uses to follow."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 5: The Hough transform and subsequent slope filtering properly
@@ -473,10 +484,12 @@
       to the left lane.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.27.01_PM.png"
-        alt="Figure 6: Applying a homography transform allows us to determine the distance of the racecar from the left lane in meters. After calculating the actual distance, the PD controller steers the robot toward the desired distance by finding the steering angle."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.27.01_PM.png"
+          alt="Figure 6: Applying a homography transform allows us to determine the distance of the racecar from the left lane in meters. After calculating the actual distance, the PD controller steers the robot toward the desired distance by finding the steering angle."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 6: Applying a homography transform allows us to determine the
@@ -492,10 +505,12 @@
       then publishes the drive command.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_7.16.16_PM.png"
-        alt="Figure 7: The PD controller for this final challenge works very similarly to our controller from Lab 3: Wall Follower. The only difference is that instead of a wall detected from LIDAR scan, we are using the lane we detected from the racecar camera."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_7.16.16_PM.png"
+          alt="Figure 7: The PD controller for this final challenge works very similarly to our controller from Lab 3: Wall Follower. The only difference is that instead of a wall detected from LIDAR scan, we are using the lane we detected from the racecar camera."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 7: The PD controller for this final challenge works very
@@ -601,10 +616,12 @@
       to measure its performance.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Untitled.png"
-        alt="Figure 8: During straights on the racetrack the error term is relatively low and constant"
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Untitled.png"
+          alt="Figure 8: During straights on the racetrack the error term is relatively low and constant"
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 8: During straights on the racetrack the error term is
@@ -613,10 +630,12 @@
       </figcaption>
     </figure>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/error_metric.png"
-        alt="Figure 9: When the racecar is turning, the error term rises and increases"
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/error_metric.png"
+          alt="Figure 9: When the racecar is turning, the error term rises and increases"
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 9: When the racecar is turning, the error term rises and
@@ -688,10 +707,12 @@
       this directionality.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_11.41.56_AM.png"
-        alt="Figure 10: Each grid cell is given a direction based on its cross-product to the nearest trajectory lane segment, and each grid cell can only traverse to neighbors in front of it in the chosen direction. This ensures that A* only travels in one direction in each lane, enforcing the lane driving constraint."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_11.41.56_AM.png"
+          alt="Figure 10: Each grid cell is given a direction based on its cross-product to the nearest trajectory lane segment, and each grid cell can only traverse to neighbors in front of it in the chosen direction. This ensures that A* only travels in one direction in each lane, enforcing the lane driving constraint."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 10: Each grid cell is given a direction based on its
@@ -725,10 +746,12 @@
       method used to handle u-turns is visualized in Figure 11.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.14.04_PM.png"
-        alt="Figure 11: A visualization of how the trajectory follower handles u turns by doing 3 point turns. The robot initially reverses until hitting the position where its distance from the wall is greater than or equal to 1.0 then continuing to travel down the planned path."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.14.04_PM.png"
+          alt="Figure 11: A visualization of how the trajectory follower handles u turns by doing 3 point turns. The robot initially reverses until hitting the position where its distance from the wall is greater than or equal to 1.0 then continuing to travel down the planned path."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 11: A visualization of how the trajectory follower handles u
@@ -765,10 +788,12 @@
       figure 12. Any point between P1 and P2 must have a t of between 0 and 1.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/IMG_1645.jpg"
-        alt="Figure 12: We clamp t to always be a number between 0 and 1, thus ensuring the projection point to always be a point between P1 and P2. This makes sure our lookahead point will always be a point on the trajectory path."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/IMG_1645.jpg"
+          alt="Figure 12: We clamp t to always be a number between 0 and 1, thus ensuring the projection point to always be a point between P1 and P2. This makes sure our lookahead point will always be a point on the trajectory path."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 12: We clamp t to always be a number between 0 and 1, thus
@@ -809,10 +834,12 @@
       for 5 seconds at stop signs when it saw them.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_(130).png"
-        alt="Figure 13: The trajectory follower uses this Finite State Machine (FSM) to only stop at a stop sign for 5 seconds once every 10 seconds. Since the stop sign detector will constantly be checking for stop signs and, therefore, constantly publishing detection messages when a stop sign is found, the trajectory follower needs an FSM in order to determine whether or not to ignore these messages."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_(130).png"
+          alt="Figure 13: The trajectory follower uses this Finite State Machine (FSM) to only stop at a stop sign for 5 seconds once every 10 seconds. Since the stop sign detector will constantly be checking for stop signs and, therefore, constantly publishing detection messages when a stop sign is found, the trajectory follower needs an FSM in order to determine whether or not to ignore these messages."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 13: The trajectory follower uses this Finite State Machine
@@ -840,10 +867,12 @@
       algorithm is both more optimal and far, far faster, as can be seen below.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.55.05_PM.png"
-        alt="Figure 14: The time it took for the improved path planner and the original Lab 6 planner to calculate a trajectory for two points close together is not noticeably different. The same is true for the distance of the “shortest” path."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.55.05_PM.png"
+          alt="Figure 14: The time it took for the improved path planner and the original Lab 6 planner to calculate a trajectory for two points close together is not noticeably different. The same is true for the distance of the “shortest” path."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 14: The time it took for the improved path planner and the
@@ -854,10 +883,12 @@
       </figcaption>
     </figure>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.57.44_PM.png"
-        alt="Figure 15: Now slightly further apart, the difference in computation times is significantly noticeable. The quality of the path itself is also better."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.57.44_PM.png"
+          alt="Figure 15: Now slightly further apart, the difference in computation times is significantly noticeable. The quality of the path itself is also better."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 15: Now slightly further apart, the difference in computation
@@ -874,10 +905,12 @@
       of the graph.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.59.58_PM.png"
-        alt="Figure 16: With two points very far apart, it is very clear the impact our improvements had on the algorithm. Not only is the computation time significantly faster—a 0.22 second computation allows the racecar to essentially drive off immediately while our previous version would have had a long wait— but the path it generated itself is also significantly better."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_9.59.58_PM.png"
+          alt="Figure 16: With two points very far apart, it is very clear the impact our improvements had on the algorithm. Not only is the computation time significantly faster—a 0.22 second computation allows the racecar to essentially drive off immediately while our previous version would have had a long wait— but the path it generated itself is also significantly better."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 16: With two points very far apart, it is very clear the
@@ -895,10 +928,12 @@
       “zig-zagging” paths that plagued the original path planner.
     </p>
     <figure>
-      <img
+      <div style="text-align: center;">
+        <img width = "800" 
         src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_8.27.05_PM.png"
         alt="Figure 17: Error is relatively low and constant when the racecar is following a straight-line."
       />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 17: Error is relatively low and constant when the racecar is
@@ -907,10 +942,12 @@
       </figcaption>
     </figure>
     <figure>
-      <img
+      <div style="text-align: center;">
+        <img width = "800" 
         src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_2024-05-13_at_8.27.43_PM.png"
         alt="Figure 18: When the racecar needs to make a u-turn away from a wall, the backing-up is reflected in a temporary increase in error."
       />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 18: When the racecar needs to make a u-turn away from a wall,
@@ -929,10 +966,12 @@
       trajectory again, the error goes back down.
     </p>
     <figure>
-      <img
-        src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_(136).png"
-        alt="Figure 19: In simulation, the robot only performed a u-turn routine once, when switching lanes from the 2nd point to the 3rd point. On the actual robot, the robot’s slower processing meant that the trajectory follower was more unstable and required many more u-turns to correct itself. The u-turn metric is thus an effective way to determine if the robot is following the path correctly by seeing if the robot has to excessively call the u-turn method."
-      />
+      <div style="text-align: center;">
+        <img width = "800" 
+          src="Developing%20Algorithms%20to%20Race%20Within%20Lanes%20and%20Nav%2001d3c23fc00744bfb2cb62a1f1e175f6/Screenshot_(136).png"
+          alt="Figure 19: In simulation, the robot only performed a u-turn routine once, when switching lanes from the 2nd point to the 3rd point. On the actual robot, the robot’s slower processing meant that the trajectory follower was more unstable and required many more u-turns to correct itself. The u-turn metric is thus an effective way to determine if the robot is following the path correctly by seeing if the robot has to excessively call the u-turn method."
+        />
+      </div>
       <figcaption aria-hidden="true">
         <strong
           >Figure 19: In simulation, the robot only performed a u-turn routine
